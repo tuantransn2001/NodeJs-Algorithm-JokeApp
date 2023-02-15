@@ -2,6 +2,7 @@ import * as React from "react";
 import { Button, Typography, Modal } from "@material-ui/core";
 import { getCookieValueByKey } from "../../common";
 import axios from "axios";
+import { styles } from "../../pages/Home/style";
 import "./style.css";
 
 export default function ModalPopUp(props) {
@@ -29,10 +30,10 @@ export default function ModalPopUp(props) {
         const { status } = response;
         if (status === 201) {
           // ? Dispatch success
-          setModalVisible(!modalVisible);
           setCurrentStoryIndex((prev) => {
             return prev + 1;
           });
+          setModalVisible(!modalVisible);
           setUserVote(null);
         }
       });
@@ -50,16 +51,12 @@ export default function ModalPopUp(props) {
           {userVote ? `This joke is funny!` : `This joke is not funny!`}
         </Typography>
         <div className="btn-wrapper">
-          <Button variant="contained" color="success" onClick={handleVoteAgain}>
+          <button style={styles.button} onClick={handleVoteAgain}>
             Vote Again
-          </Button>
-          <Button
-            variant="contained"
-            color="success"
-            onClick={handleSwitchToNextStory}
-          >
+          </button>
+          <button style={styles.button} onClick={handleSwitchToNextStory}>
             Next Joke
-          </Button>
+          </button>
         </div>
       </div>
     </Modal>
