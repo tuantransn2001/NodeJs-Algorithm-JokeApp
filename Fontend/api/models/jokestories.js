@@ -19,14 +19,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
       },
-      title: {
-        type: DataTypes.STRING,
-      },
-      subTitle: {
-        type: DataTypes.STRING,
-      },
       story: { type: DataTypes.STRING },
-      vote: { type: DataTypes.BOOLEAN, allowNull: true },
+      vote: { type: DataTypes.STRING, allowNull: true },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE,

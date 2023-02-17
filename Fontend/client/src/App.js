@@ -8,20 +8,10 @@ function App() {
   }, []);
 
   return (
-    <div style={styles.container}>
+    <div className="app_container">
       <Home />
     </div>
   );
 }
 
 export default App;
-
-const styles = {
-  container: {
-    margin: "0",
-    padding: "0",
-    // width: "100vw",
-    // height: "100vh",
-    // backgroundColor: "#AAB7B8",
-  },
-};
