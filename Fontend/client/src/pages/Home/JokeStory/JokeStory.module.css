@@ -1,0 +1,43 @@
+.wrapper {
+  width: var(--tablet-width);
+  margin: 0 auto;
+  padding: 55px 120px 66px 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.funnyButton {
+  background-color: var(--blue-color);
+}
+
+.funnyButton:hover {
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.notFunnyButton {
+  background-color: var(--primary-color);
+}
+
+.resetJokeStoryButton {
+  border: 1px solid var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  margin: 0 auto;
+  transition: all ease 0.25s;
+}
+
+.resetJokeStoryButton:hover {
+  border-color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}

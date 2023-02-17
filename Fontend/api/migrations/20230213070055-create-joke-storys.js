@@ -8,15 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-
-      title: {
-        type: Sequelize.STRING,
-      },
-      subTitle: {
-        type: Sequelize.STRING,
-      },
       story: { type: Sequelize.TEXT },
-      vote: { type: Sequelize.BOOLEAN, allowNull: true },
+      vote: { type: Sequelize.STRING, allowNull: true },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

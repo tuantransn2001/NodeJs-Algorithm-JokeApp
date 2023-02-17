@@ -1,21 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./pages/Home";
 import "./App.css";
+
 function App() {
+  useEffect(() => {
+    document.title = "Joke Single Serving App";
+  }, []);
+
   return (
-    <div style={styles.container}>
+    <div className="app_container">
       <Home />
     </div>
   );
 }
 
 export default App;
-
-const styles = {
-  container: {
-    flexDirection: "column",
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-};

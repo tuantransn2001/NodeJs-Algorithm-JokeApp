@@ -8,6 +8,7 @@ jokeStoriesRouter.get("/", async (req, res) => {
 
 jokeStoriesRouter.put("/:id/:vote", async (req, res) => {
   const { id, vote } = req.params;
+
   await JokeStories.update(
     {
       vote,
