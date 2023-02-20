@@ -60,7 +60,9 @@ const JokeStory = (props) => {
   return (
     <>
       <div className={style.wrapper}>
-        <p className="paragraph">{stories[currentStoryIndex]?.story}</p>
+        {stories[currentStoryIndex]?.story && (
+          <p className="paragraph">{stories[currentStoryIndex]?.story}</p>
+        )}
 
         {renderButtons()}
       </div>

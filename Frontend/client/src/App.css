@@ -7,6 +7,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+.app_container {
+  display: flex;
+  justify-content: center;
+  /* width: var(--screen-width); */
+}
+
 button {
   outline: none;
   border: 1px solid transparent;
@@ -33,12 +39,6 @@ button:hover {
   border: 1px solid var(--primary-color);
 }
 
-.app_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .paragraph {
   font-size: 15px;
   font-weight: 400;
@@ -51,7 +51,30 @@ button:hover {
   --white-color: #ffffff;
   --paragraph-color: rgba(126, 126, 126, 1);
   --blue-color: #2c7edb;
+  --screen-width: 1920px;
   --tablet-width: 970px;
+  --mobile-width: 380px;
   --tablet-button-width: 220px;
+  --mobile-button-width: 128px;
   --tablet-logo-size: 60px;
+  --mobile-logo-size: 40px;
+  --tablet-avatar-size: 50px;
+  --mobile-avatar-size: 40px;
+}
+
+@media only screen and (max-width: 381px) {
+  .paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraph-color);
+    line-height: 1.3;
+  }
+  button {
+    font-size: 12px;
+  }
+
+  .button.medium {
+    width: var(--mobile-button-width);
+    padding: 8px 0;
+  }
 }

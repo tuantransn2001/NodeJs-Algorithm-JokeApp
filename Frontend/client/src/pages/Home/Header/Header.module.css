@@ -1,6 +1,6 @@
 #header {
   width: var(--tablet-width);
-  margin: 0 auto;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,7 +36,22 @@
   color: #6c7b8b;
 }
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: var(--tablet-avatar-size);
+  height: var(--tablet-avatar-size);
   border-radius: 50px;
+}
+
+@media only screen and (max-width: 381px) {
+  #header {
+    width: var(--mobile-width);
+    padding: 10px 15px 10px 20px;
+  }
+  .logo {
+    width: var(--mobile-logo-size);
+    height: var(--mobile-logo-size);
+  }
+  .avatar {
+    height: var(--mobile-avatar-size);
+    width: var(--mobile-avatar-size);
+  }
 }

@@ -9,13 +9,13 @@ I) App Requirements:
 
 II) Technical
 
--Front-end: React Js , axios
+-Front-end: React Js , axios , useCookie
 -Back-end: NodeJs(ExpressJs) ,cors , Sequelize-CLI , nodemon
 -Database: MySQL
 
 III) Database
 
-1. Table JokeStories with column id,title,subTitle,story,vote
+1. Table JokeStories with column id,story,vote
 2. Api call method: GET(Get all jokes) , PUT ( update the vote )
 
 IV) App flow
@@ -29,4 +29,4 @@ IV) App flow
 2. Vote Buttons(like or dislike) onClick -> App will save user vote and store it into cookie and show modal with vote user has voted and render to UI will two buttons ( Vote again and Switch To Next Joke )
 
 3. Vote Again Button onClick -> Close Modal and Reset User Vote(cookie).
-   Switch To Next Story Button onClick -> call PUT method if success close modal and store vote into database and reset user vote(cookie) and Switch to next story and check if there are no more story so display "That's all the jokes for today! Come back another day!" else switch to next story else console.log("Err")
+   Switch To Next Story Button onClick -> call PUT method if success close modal and store vote into database and reset user vote(cookie) and Switch to next story and check if there are no more story so display "That's all the jokes for today! Come back another day!" and show read joke again button( the app will reset ) else switch to next story else console.log("Err")

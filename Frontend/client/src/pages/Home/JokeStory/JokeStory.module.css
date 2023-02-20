@@ -1,6 +1,5 @@
 .wrapper {
   width: var(--tablet-width);
-  margin: 0 auto;
   padding: 55px 120px 66px 55px;
   display: flex;
   flex-direction: column;
@@ -40,4 +39,22 @@
   border-color: var(--white-color);
   background-color: var(--primary-color);
   color: var(--white-color);
+}
+
+@media only screen and (max-width: 381px) {
+  .wrapper {
+    width: var(--mobile-width);
+    margin: 0 auto;
+    padding: 60px 25px 54px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+  }
+  .wrapper p {
+    height: 184px;
+    overflow-y: scroll;
+  }
+  .buttonWrapper {
+    gap: 32px;
+  }
 }

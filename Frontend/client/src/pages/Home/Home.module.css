@@ -1,0 +1,9 @@
+.homeWrapper {
+  width: var(--tablet-width);
+}
+
+@media only screen and (max-width: 380px) {
+  .homeWrapper {
+    width: var(--mobile-width);
+  }
+}
